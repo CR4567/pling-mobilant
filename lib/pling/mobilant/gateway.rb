@@ -24,6 +24,7 @@ module Pling
         # optional url parameter
         params[:from]    = source if source
         params[:debug]   = debug  if debug
+        params[:concat]  = concat if concat
 
         response = connection.get do |request|
           request.url(configuration[:delivery_url], params)
