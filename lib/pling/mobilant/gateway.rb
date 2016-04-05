@@ -67,6 +67,10 @@ module Pling
           configuration[:debug] ? 1 : nil
         end
 
+        def concat
+          configuration[:concat] ? 1 : nil
+        end
+
         def source
           return nil unless configuration[:source]
           configuration[:source].to_s.strip
